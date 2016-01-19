@@ -1,0 +1,743 @@
+/* -------------------------------------------------------------------------
+    Styleguide
+---------------------------------------------------------------------------- */
+
+@charset 'UTF-8';
+
+
+// 1. Variables
+@import
+    'utils/variables';
+
+
+// 2. Functions
+@import
+    'utils/functions';
+
+
+// 3. Mixins
+@import
+    'utils/mixins';
+
+
+
+/* -------------------------------------------------------------------------
+    Fonts
+---------------------------------------------------------------------------- */
+
+@font-face{
+
+    font-family: AvenirNext-Regular;
+            src:url("../fonts/AvenirNext-Regular.woff2") format("woff2"),
+                url("../fonts/AvenirNext-Regular.woff") format("woff"),
+                url("../fonts/AvenirNext-Regular.ttf") format("truetype");
+                font-style: normal;
+}
+
+@font-face{
+
+    font-family: AvenirNext-Italic;
+            src:url("../fonts/AvenirNext-Italic.woff2") format("woff2"),
+                url("../fonts/AvenirNext-Italic.woff") format("woff"),
+                url("../fonts/AvenirNext-Italic.ttf") format("truetype");
+                font-style: italic;
+
+
+}
+
+@font-face{
+
+    font-family: AvenirNext-Medium;
+            src:url("../fonts/AvenirNext-Medium.woff2") format("woff2"),
+                url("../fonts/AvenirNext-Medium.woff") format("woff"),
+                url("../fonts/AvenirNext-Medium.ttf") format("truetype");
+                font-style: normal;
+
+}
+
+@font-face{
+
+    font-family: AvenirNext-Demi;
+            src:url("../fonts/AvenirNext-Demi.woff2") format("woff2"),
+                url("../fonts/AvenirNext-Demi.woff") format("woff"),
+                url("../fonts/AvenirNext-Demi.ttf") format("truetype");
+                font-style: normal;
+
+}
+
+@font-face{
+
+    font-family: AvenirNext-Bold;
+            src:url("../fonts/AvenirNext-Bold.woff2") format("woff2"),
+                url("../fonts/AvenirNext-Bold.woff") format("woff"),
+                url("../fonts/AvenirNext-Bold.ttf") format("truetype");
+                font-style: normal;
+
+}
+
+@font-face{
+
+    font-family: MarselisSlab-Regular;
+            src:url("../fonts/MarselisSlab-Regular.woff2") format("woff2"),
+                url("../fonts/MarselisSlab-Regular.woff") format("woff"),
+                url("../fonts/MarselisSlab-Regular.ttf") format("truetype");
+                font-style: normal;
+
+}
+
+@font-face{
+
+    font-family: MarselisSlab-Italic;
+            src:url("../fonts/MarselisSlab-Italic.woff2") format("woff2"),
+                url("../fonts/MarselisSlab-Italic.woff") format("woff"),
+                url("../fonts/MarselisSlab-Italic.ttf") format("truetype");
+                font-style: italic;
+
+}
+
+@font-face{
+
+    font-family: MarselisSlab-Light;
+            src:url("../fonts/MarselisSlab-Light.woff2") format("woff2"),
+                url("../fonts/MarselisSlab-Light.woff") format("woff"),
+                url("../fonts/MarselisSlab-Light.ttf") format("truetype");
+                font-style: normal;
+
+}
+
+@font-face{
+
+    font-family: MarselisSlab-LightItalic;
+            src:url("../fonts/MarselisSlab-LightItalic.woff2") format("woff2"),
+                url("../fonts/MarselisSlab-LightItalic.woff") format("woff"),
+                url("../fonts/MarselisSlab-LightItalic.ttf") format("truetype");
+                font-style: italic;
+
+}
+
+@font-face{
+
+    font-family: MarselisSlab-Bold;
+            src:url("../fonts/MarselisSlab-Bold.woff2") format("woff2"),
+                url("../fonts/MarselisSlab-Bold.woff") format("woff"),
+                url("../fonts/MarselisSlab-Bold.ttf") format("truetype");
+                font-style: normal;
+
+}
+
+@font-face{
+
+    font-family: MarselisSlab-BoldItalic;
+            src:url("../fonts/MarselisSlab-BoldItalic.woff2") format("woff2"),
+                url("../fonts/MarselisSlab-BoldItalic.woff") format("woff"),
+                url("../fonts/MarselisSlab-BoldItalic.ttf") format("truetype");
+                font-style: italic;
+
+}
+
+
+/* -------------------------------------------------------------------------
+    Styles
+---------------------------------------------------------------------------- */
+
+*,
+*:before,
+*:after {
+
+    @include box-sizing;
+
+}
+
+
+html {
+
+    font-size: 1em;
+
+}
+
+body {
+
+    font-family: AvenirNext-Regular, serif;
+    font-weight: 400;
+    line-height: 1.45;
+    color: #333;
+
+}
+
+p {
+
+    margin-bottom: 1.3em;
+
+}
+
+
+/* -------------------------------------------------------------------------
+    Headings
+---------------------------------------------------------------------------- */
+
+.sg-h1,
+.sg-h2,
+.sg-h3,
+.sg-h4 {
+
+    margin: 1.414em 0 0.5em;
+    font-family: AvenirNext-Bold, serif;
+    font-weight: inherit;
+    line-height: 1.2;
+    text-transform: capitalize;
+
+}
+
+.sg-h1 {
+
+    margin-top: 0;
+    font-size: 2.074em;
+
+}
+
+.sg-h2 {
+
+    font-size: 1.728em;
+
+}
+
+.sg-h3 {
+
+    font-size: 1.44em;
+
+}
+
+.sg-h4 {
+
+    font-size: 1.2em;
+    border-bottom: 1px solid;
+
+}
+
+.sg-small {
+
+    font-size: 0.633em;
+    padding-top: 4px;
+
+}
+
+/* -------------------------------------------------------------------------
+    Layout
+---------------------------------------------------------------------------- */
+
+
+.sg-wrapper {
+
+    position: relative;
+
+}
+
+.sg-header {
+
+    background: $black;
+    color: $white;
+    position: relative;
+    z-index: 100;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+
+}
+
+.sg-footer {
+
+    background: $grey;
+
+}
+
+.sg-logo {
+
+    display: block;
+    font-size: 1.4em;
+    margin: 0;
+    line-height: 1.5;
+    padding: 6px 0 0 0;
+
+    img {
+
+        width: 120px;
+
+    }
+
+    .sg-product {
+
+        font-family: AvenirNext-regular;
+        font-size: 0.8em;
+
+    }
+
+    @include respond-to(640px) {
+
+        float: left;
+        padding: 6px 0 8px 0;
+
+    }
+
+}
+
+.sg-version {
+
+    width: 100%;
+    padding: 0 0 5px 5px;
+
+    @include respond-to(640px) {
+
+        padding: 18px 0 0px 0;
+        float: right;
+        width: auto;
+
+    }
+
+}
+
+.sg-btn--top {
+
+    display: block;
+    width: 100%;
+    text-align: right;
+    font-size: 0.8em;
+    margin-bottom: 2em;
+    margin-top: 1.3em;
+
+}
+
+.sg-contents {
+
+    text-transform: capitalize;
+    margin-bottom: 2.414em;
+
+}
+
+.sg-disabled {
+
+    color: $grey;
+
+}
+
+.sg-example {
+
+    background: $white;
+    border: 1px solid $grey;
+    padding: 1em;
+    border-radius: 3px;
+    margin-bottom: 2em;
+
+}
+
+/* -------------------------------------------------------------------------
+    Utility Classes
+---------------------------------------------------------------------------- */
+
+.sg-container {
+
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @include clearfix;
+
+}
+
+.sg-visually-hidden {
+
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+
+}
+
+.sg-visually-hidden-focusable:active,
+.sg-visually-hidden-focusable:focus {
+
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+
+}
+
+
+
+/* -------------------------------------------------------------------------
+    Code Blocks
+---------------------------------------------------------------------------- */
+
+.code-block {
+
+    background: #f7f7f7;
+    border-radius: 3px;
+    color: #666;
+    box-sizing: border-box;
+    border: 1px solid #DDD;
+    -webkit-font-smoothing: antialiased;
+    margin-bottom: 1em;
+    padding: 1em;
+
+}
+
+.code {
+
+    display: none;
+    position: relative;
+    max-height: 200px;
+    overflow: auto;
+
+}
+
+.code.active {
+
+    display: block;
+
+}
+
+pre {
+
+    margin: 0;
+    font-family: monospace;
+    white-space: pre;
+    background: #f8f8f8;
+
+}
+
+code {
+
+    display: block;
+    padding: 0;
+    overflow-y: auto;
+    font-weight: 300;
+
+}
+
+
+ /* -------------------------------------------------------------------------
+    GitHub Gist Theme
+---------------------------------------------------------------------------- */
+
+.hljs {
+
+    display: block;
+    padding: 0;
+    color: #333333;
+    overflow-x: auto;
+    -webkit-text-size-adjust: none;
+
+}
+
+.hljs-comment,
+.bash .hljs-shebang,
+.java .hljs-javadoc,
+.javascript .hljs-javadoc,
+.rust .hljs-preprocessor {
+
+    color: #969896;
+
+}
+
+.hljs-string,
+.apache .hljs-sqbracket,
+.coffeescript .hljs-subst,
+.coffeescript .hljs-regexp,
+.cpp .hljs-preprocessor,
+.c .hljs-preprocessor,
+.javascript .hljs-regexp,
+.json .hljs-attribute,
+.makefile .hljs-variable,
+.markdown .hljs-value,
+.markdown .hljs-link_label,
+.markdown .hljs-strong,
+.markdown .hljs-emphasis,
+.markdown .hljs-blockquote,
+.nginx .hljs-regexp,
+.nginx .hljs-number,
+.objectivec .hljs-preprocessor .hljs-title,
+.perl .hljs-regexp,
+.php .hljs-regexp,
+.xml .hljs-value,
+.less .hljs-built_in,
+.scss .hljs-built_in {
+
+    color: #df5000;
+
+}
+
+.hljs-keyword,
+.css .hljs-at_rule,
+.css .hljs-important,
+.http .hljs-request,
+.ini .hljs-setting,
+.haskell .hljs-type,
+.java .hljs-javadoctag,
+.javascript .hljs-tag,
+.javascript .hljs-javadoctag,
+.nginx .hljs-title,
+.objectivec .hljs-preprocessor,
+.php .hljs-phpdoc,
+.sql .hljs-built_in,
+.less .hljs-tag,
+.less .hljs-at_rule,
+.scss .hljs-tag,
+.scss .hljs-at_rule,
+.scss .hljs-important,
+.stylus .hljs-at_rule,
+.go .hljs-typename,
+.swift .hljs-preprocessor {
+
+    color: #a71d5d;
+
+}
+
+.apache .hljs-common,
+.apache .hljs-cbracket,
+.apache .hljs-keyword,
+.bash .hljs-literal,
+.bash .hljs-built_in,
+.coffeescript .hljs-literal,
+.coffeescript .hljs-built_in,
+.coffeescript .hljs-number,
+.cpp .hljs-number,
+.cpp .hljs-built_in,
+.c .hljs-number,
+.c .hljs-built_in,
+.cs .hljs-number,
+.cs .hljs-built_in,
+.css .hljs-attribute,
+.css .hljs-hexcolor,
+.css .hljs-number,
+.css .hljs-function,
+.haskell .hljs-number,
+.http .hljs-literal,
+.http .hljs-attribute,
+.java .hljs-number,
+.javascript .hljs-built_in,
+.javascript .hljs-literal,
+.javascript .hljs-number,
+.json .hljs-number,
+.makefile .hljs-keyword,
+.markdown .hljs-link_reference,
+.nginx .hljs-built_in,
+.objectivec .hljs-literal,
+.objectivec .hljs-number,
+.objectivec .hljs-built_in,
+.php .hljs-literal,
+.php .hljs-number,
+.python .hljs-number,
+.ruby .hljs-prompt,
+.ruby .hljs-constant,
+.ruby .hljs-number,
+.ruby .hljs-subst .hljs-keyword,
+.ruby .hljs-symbol,
+.rust .hljs-number,
+.sql .hljs-number,
+.puppet .hljs-function,
+.less .hljs-number,
+.less .hljs-hexcolor,
+.less .hljs-function,
+.less .hljs-attribute,
+.scss .hljs-preprocessor,
+.scss .hljs-number,
+.scss .hljs-hexcolor,
+.scss .hljs-function,
+.scss .hljs-attribute,
+.stylus .hljs-number,
+.stylus .hljs-hexcolor,
+.stylus .hljs-attribute,
+.stylus .hljs-params,
+.go .hljs-built_in,
+.go .hljs-constant,
+.swift .hljs-built_in,
+.swift .hljs-number {
+
+    color: #0086b3;
+
+}
+
+.apache .hljs-tag,
+.cs .hljs-xmlDocTag,
+.css .hljs-tag,
+.xml .hljs-title,
+.stylus .hljs-tag {
+
+    color: #63a35c;
+
+}
+
+.bash .hljs-variable,
+.cs .hljs-preprocessor,
+.cs .hljs-preprocessor .hljs-keyword,
+.css .hljs-attr_selector,
+.css .hljs-value,
+.ini .hljs-value,
+.ini .hljs-keyword,
+.javascript .hljs-tag .hljs-title,
+.makefile .hljs-constant,
+.nginx .hljs-variable,
+.xml .hljs-tag,
+.scss .hljs-variable {
+
+    color: #333333;
+
+}
+
+.bash .hljs-title,
+.coffeescript .hljs-title,
+.cpp .hljs-title,
+.c .hljs-title,
+.cs .hljs-title,
+.css .hljs-id,
+.css .hljs-class,
+.css .hljs-pseudo,
+.ini .hljs-title,
+.haskell .hljs-title,
+.haskell .hljs-pragma,
+.java .hljs-title,
+.javascript .hljs-title,
+.makefile .hljs-title,
+.objectivec .hljs-title,
+.perl .hljs-sub,
+.php .hljs-title,
+.python .hljs-decorator,
+.python .hljs-title,
+.ruby .hljs-parent,
+.ruby .hljs-title,
+.rust .hljs-title,
+.xml .hljs-attribute,
+.puppet .hljs-title,
+.less .hljs-id,
+.less .hljs-pseudo,
+.less .hljs-class,
+.scss .hljs-id,
+.scss .hljs-pseudo,
+.scss .hljs-class,
+.stylus .hljs-class,
+.stylus .hljs-id,
+.stylus .hljs-pseudo,
+.stylus .hljs-title,
+.swift .hljs-title,
+.diff .hljs-chunk {
+
+    color: #795da3;
+
+}
+
+.coffeescript .hljs-reserved,
+.coffeescript .hljs-attribute {
+
+    color: #1d3e81;
+
+}
+
+.diff .hljs-chunk {
+
+    font-weight: bold;
+
+}
+
+.diff .hljs-addition {
+
+    color: #55a532;
+    background-color: #eaffea;
+
+}
+
+.diff .hljs-deletion {
+
+    color: #bd2c00;
+    background-color: #ffecec;
+
+}
+
+.markdown .hljs-link_url {
+
+    text-decoration: underline;
+
+}
+
+
+
+ /* -------------------------------------------------------------------------
+    Color Blocks
+---------------------------------------------------------------------------- */
+
+.sg-example-color {
+
+    padding: 1em;
+
+    @include clearfix;
+
+}
+
+.color-red--100 {
+
+    background: $red-100;
+
+}
+
+.color-red--200 {
+
+    background: $red-200;
+
+}
+
+.color-red--300 {
+
+    background: $red-300;
+    color: #fff;
+
+}
+
+.color-red--400 {
+
+    background: $red-400;
+    color: #fff;
+
+}
+.color-red--500 {
+
+    background: $red-500;
+    color: #fff;
+
+}
+
+.color-shade--100 {
+
+    background: $white;
+    border: 1px solid #CCCCCC;
+
+}
+
+.color-shade--200 {
+
+    background: $grey-light;
+
+}
+
+.color-shade--300 {
+
+    background: $grey;
+
+}
+
+.color-shade--400 {
+
+    background: $grey-dark;
+    color: #fff;
+
+}
+
+.color-shade--500 {
+
+    background: $black;
+    color: #fff;
+
+}
+

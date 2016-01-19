@@ -1,0 +1,19 @@
+{
+  "name": "the-drum-styleguide",
+  "version": "1.0.0",
+  "description": "The living styleguide for the redesign of thedrum.com",
+  "main": "gulpfile.js",
+  "author": "@thedrum",
+  "license": "MIT",
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-csslint": "^0.2.0",
+    "gulp-html-validator": "0.0.5",
+    "gulp-jslint": "^0.2.2",
+    "gulp-sass": "^2.1.1",
+    "gulp-size": "^2.0.0"
+  }
+}
