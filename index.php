@@ -21,7 +21,7 @@
                 <div class="sg-container">
 
                   <h1 class="sg-logo">
-                    <img src="images/logo-the-drum.svg" alt="">
+                    <img src="assets/logo-the-drum.svg" alt="">
                     <span class="sg-product">| Styleguide</span>
                   </h1>
 
