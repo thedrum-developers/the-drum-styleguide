@@ -1,4 +1,3 @@
-<?php include_once('functions.php'); ?>
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
@@ -6,8 +5,8 @@
   <title>Styleguide | The Drum</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="public/css/sg-styles.css">
-  <link rel="stylesheet" href="public/css/pattern-styles.css">
+  <link rel="stylesheet" href="css/sg-styles.css">
+  <link rel="stylesheet" href="css/pattern-styles.css">
 
 </head>
 <body>
@@ -54,7 +53,11 @@
 
         <hr>
 
-        <?php listFilesInFolder('markup'); ?>
+        <!--
+            
+            Provide a list of the patterns
+
+        -->
 
         <h2 class="sg-h2">Guidelines</h2>
         <ol class="sg-contents">
@@ -154,7 +157,11 @@
         <hr>
 
 
-        <?php renderFilesInFolder('markup'); ?>
+        <!--
+            
+            Output the patterns markup
+
+        -->
 
         </div>
 
@@ -189,8 +196,8 @@
 <![endif]-->
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
-<script src="public/js/sg-scripts.js"></script>
-<script src="public/js/pattern-scripts.js"></script>
+<script src="js/sg-scripts.js"></script>
+<script src="js/pattern-scripts.js"></script>
 
 </body>
 </html>

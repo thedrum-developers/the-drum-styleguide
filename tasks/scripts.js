@@ -1,20 +1,21 @@
 var gulp = require('gulp'),
     concat = require("gulp-concat");
 
-gulp.task('scripts-patterns', function () {
 
-    gulp.src(['./js/patterns/*.js'])
+gulp.task('build-patterns-js', function () {
+
+    gulp.src(['./patterns/**/*.js'])
       .pipe(concat("pattern-scripts.js"))
       .pipe(gulp.dest('./public/js'));
 
 });
 
-gulp.task('scripts-sg', function () {
+gulp.task('build-sg-scripts', function () {
 
-    gulp.src(['./js/sg-scripts.js'])
+    gulp.src(['./src/js/sg-scripts.js'])
       .pipe(gulp.dest('./public/js'));
 
 });
 
 
-gulp.task('scripts', ['scripts-sg', 'scripts-patterns']);
+gulp.task('build-js', ['build-patterns-js', 'build-sg-scripts']);
