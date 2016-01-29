@@ -59,6 +59,17 @@
 
         -->
 
+
+        <div>
+            {% for pattern in patterns %}
+            <ul><ol>
+                <a href="#{{pattern.name}}">
+                    {{pattern.name}}
+                </a>
+            </ol></ul>
+            {% endfor %}
+        </div>
+
         <h2 class="sg-h2">Guidelines</h2>
         <ol class="sg-contents">
             <li class="sg-disabled">General guidelines&#8599;</li>
@@ -162,6 +173,20 @@
             Output the patterns markup
 
         -->
+
+
+            {% for pattern in patterns %}
+                <h2 id="{{pattern.name}}">{{pattern.name}}</h2>
+                {{pattern.mdToHtml | safe}}
+                {{pattern.code}}
+                 <code>{{pattern.example}}</code>
+                <!-- <code>{{pattern.code}}</code> -->
+            {% endfor %}
+
+
+
+        </div>
+
 
         </div>
 
