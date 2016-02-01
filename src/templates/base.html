@@ -173,14 +173,15 @@
             Output the patterns markup
 
         -->
-
-
             {% for pattern in patterns %}
                 <h2 id="{{pattern.name}}">{{pattern.name}}</h2>
+
                 {{pattern.mdToHtml | safe}}
-                {{pattern.code}}
-                 <code>{{pattern.example}}</code>
-                <!-- <code>{{pattern.code}}</code> -->
+
+                {{pattern.example}}
+                <pre>
+                     <code>{{pattern.code}}</code>
+                </pre>
             {% endfor %}
 
 
