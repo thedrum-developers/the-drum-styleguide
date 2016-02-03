@@ -43,32 +43,6 @@
 
         <hr>
 
-        <h2 class="sg-h2">Getting started</h2>
-
-        <ol class="sg-contents">
-            <li><a href="#installation">Installation</a></li>
-            <li><a href="#colors">Colors</a></li>
-            <li><a href="#fonts">Fonts</a></li>
-        </ol>
-
-        <hr>
-
-        <!--
-            
-            Provide a list of the patterns
-
-        -->
-
-
-        <div>
-            {% for pattern in patterns %}
-            <ul><ol>
-                <a href="#{{pattern.name}}">
-                    {{pattern.name}}
-                </a>
-            </ol></ul>
-            {% endfor %}
-        </div>
 
         <h2 class="sg-h2">Guidelines</h2>
         <ol class="sg-contents">
@@ -81,108 +55,7 @@
 
         <hr>
 
-
-        <h2 id="installation" class="sg-h2">Installation</h2>
-
-        <p>1. The Styleguide is built using the <a href="https://nodejs.org/en/" target="_blank">Node.js</a> package <a href="http://gulpjs.com/" target="_blank">Gulp.js</a>. To install the Styleguide and contribute to the project you should clone the repo from <a href="https://github.com/thedrum-developers/the-drum-styleguide" target="_blank">Github</a>.</p>
-
-        <div class="code-block">
-            <pre><code>$git clone https://github.com/thedrum-developers/the-drum-styleguide</code></pre>
-        </div>
-
-        <p>2. In terminal, run Node Package Manager to install the node dependences.</p>
-
-        <div class="code-block">
-            <pre><code>$npm install</code></pre>
-        </div>
-
-        <p>3. Build the project by running Gulp.</p>
-
-        <div class="code-block">
-            <pre><code>$gulp</code></pre>
-        </div>
-
-        <a class="sg-btn--top" href="#top">&#8593; Back to Top</a>
-
-        <hr>
-
-        <h2 id="colors" class="sg-h2">Colours</h2>
-
-        <p>Majority of the new colour pallet has still to be formulated. However, the acceptance criteria for commiting new colours into the project will be that they comply with <a href="https://www.w3.org/TR/WCAG20/" target="_blank">WCAG2AA</a>.</p>
-
-        <p>You can test proposed additions with <a href="http://webaim.org/resources/contrastchecker/" target="_blank">Webaim Contrast Checker</a></p>
-
-
-        <div class="sg-example-color color-shade--100">
-            <div class="sg-example-color-info">
-                <div>#FFFFFF</div>
-                <div>rgb(255, 255, 255)</div>
-            </div>
-        </div>
-        <div class="sg-example-color color-shade--200">
-            <div class="sg-example-color-info">
-                <div>#F38D90</div>
-                <div>rgb(233, 233, 233)</div>
-            </div>
-        </div>
-        <div class="sg-example-color color-shade--300">
-            <div class="sg-example-color-info">
-                <div>#ED1C24</div>
-                <div>rgb(204, 204, 204)</div>
-            </div>
-        </div>
-        <div class="sg-example-color color-shade--400">
-            <div class="sg-example-color-info">
-                <div>#B30E14</div>
-                <div>rgb(67, 60, 62)</div>
-            </div>
-        </div>
-        <div class="sg-example-color color-shade--500">
-            <div class="sg-example-color-info">
-                <div>#840A0F</div>
-                <div>rgb(35, 31, 32)</div>
-            </div>
-        </div>
-
-        <div class="sg-example-color color-red--300">
-            <div class="sg-example-color-info">
-                <div>#ED1C24</div>
-                <div>rgb(237, 28, 36)</div>
-                <div class="sg-small">Font size 24px+</div>
-            </div>
-        </div>
-
-
-        <a class="sg-btn--top" href="#top">&#8593; Back to Top</a>
-
-        <hr>
-
-        <h2 id="fonts" class="sg-h2">Font stack</h2>
-
-        <p>The Drum uses multiple font weights from the font families <a href="http://www.linotype.com/2090/avenir-next.html" target="_blank">Avenir Next</a> and <a href="http://www.linotype.com/1386572/ff-marselis-slab-family.html" target="_blank">Marselis Slab</a>.</p>
-
-        <p>Provided by <a href="http://www.monotype.com/" target="_blank">Monotype</a></p>
-
-        <a class="sg-btn--top" href="#top">&#8593; Back to Top</a>
-
-        <hr>
-
-
-        <!--
-            
-            Output the patterns markup
-
-        -->
-            {% for pattern in patterns %}
-                <h2 id="{{pattern.name}}">{{pattern.name}}</h2>
-
-                {{pattern.mdToHtml | safe}}
-
-                {{pattern.example}}
-                <pre>
-                     <code>{{pattern.code}}</code>
-                </pre>
-            {% endfor %}
+          {% block main %}{% endblock %}
 
 
 

@@ -19,9 +19,15 @@ gulp.task('patterns', function () {
 		});
 	});
 
-	return gulp.src('./src/templates/base.html')
+	// var env = new nunjucks.Environment()
+		// env
+	console.log(nunjucks.configure);
+
+	return gulp.src('./src/templates/partials/_patterns.html')
 		.pipe(gulpData(function () { return data; }))
-		.pipe(nunjucks.compile({data: data}))
+		.pipe(nunjucks.compile({data: data}, {
+			include:['./src/templates/']
+		}))
 		.pipe(rename('index.html'))
 		.pipe(gulp.dest('public'));
 
