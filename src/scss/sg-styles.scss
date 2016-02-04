@@ -281,6 +281,21 @@ p {
 
 }
 
+.sg-nav {
+
+    float: left;
+    padding: 10px 0;
+
+    a {
+        color: #fff;
+        font-family: AvenirNext-Regular;
+    }
+
+    @include respond-to(640px) {
+        float: right;
+    }
+}
+
 .sg-version {
 
     width: 100%;

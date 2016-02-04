@@ -1,10 +1,4 @@
-## HTML
-
-* [General Styleguide](#)
-* [Accessibility Styleguide](#)
-* [HTML Styleguide](#)
-* [Sass & CSS Styleguide](#)
-* [JavaScript Styleguide](#)
+# HTML
 
 - - -
 

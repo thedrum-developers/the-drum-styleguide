@@ -22,17 +22,16 @@
         -->
 
 
-        <div>
-            {% for pattern in patterns %}
-            <ul><ol>
-                <a href="#{{pattern.name}}">
-                    {{pattern.name}}
-                </a>
-            </ol></ul>
-            {% endfor %}
-        </div>
+        <h2 class="sg-h2">Patterns</h2>
 
-        
+        <ol class="sg-contents">
+            {% for pattern in patterns %}
+            <li><a href="#{{pattern.name}}">{{pattern.name}}</a></li>
+            {% endfor %}
+        </ol>
+
+
+        <hr>
 
 
         <h2 id="installation" class="sg-h2">Installation</h2>
@@ -55,7 +54,7 @@
             <pre><code>$gulp</code></pre>
         </div>
 
-        <a class="sg-btn--top" href="#top">&#8593; Back to Top</a>
+        <a class="sg-btn--top" href="#top">&#8593; Back to the Top</a>
 
         <hr>
 
@@ -106,7 +105,7 @@
         </div>
 
 
-        <a class="sg-btn--top" href="#top">&#8593; Back to Top</a>
+        <a class="sg-btn--top" href="#top">&#8593; Back to the Top</a>
 
         <hr>
 
@@ -116,7 +115,7 @@
 
         <p>Provided by <a href="http://www.monotype.com/" target="_blank">Monotype</a></p>
 
-        <a class="sg-btn--top" href="#top">&#8593; Back to Top</a>
+        <a class="sg-btn--top" href="#top">&#8593; Back to the Top</a>
 
         <hr>
 
@@ -136,6 +135,7 @@
                      <code>{{pattern.code}}</code>
                 </pre>
             {% endfor %}
+            
 
 {% endblock %}
 

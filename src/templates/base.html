@@ -20,11 +20,16 @@
                 <div class="sg-container">
 
                   <h1 class="sg-logo">
-                    <img src="assets/logo-the-drum.svg" alt="">
+                    <img src="images/logo-the-drum.svg" alt="">
                     <span class="sg-product">| Styleguide</span>
                   </h1>
 
-                  <div class="sg-version sg-small">Version: 1.0.0</div>
+                  <nav>
+                        <div class="sg-nav">
+                            <a href="/">Patterns&#187;</a> |
+                            <a href="/general-guidelines.html">Guidelines&#187;</a>
+                        </div>
+                  </nav>
 
                 </div>
 
@@ -44,20 +49,9 @@
         <hr>
 
 
-        <h2 class="sg-h2">Guidelines</h2>
-        <ol class="sg-contents">
-            <li class="sg-disabled">General guidelines&#8599;</li>
-            <li class="sg-disabled">Accessibility guidelines&#8599;</li>
-            <li class="sg-disabled">HTML guidelines&#8599;</li>
-            <li class="sg-disabled">Sass & CSS guidelines&#8599;</li>
-            <li class="sg-disabled">Javascript guidelines&#8599;</li>
-        </ol>
+          {% block main %}
 
-        <hr>
-
-          {% block main %}{% endblock %}
-
-
+          {% endblock %}
 
         </div>
 
@@ -74,6 +68,8 @@
             <footer>
 
                 <p class="sg-small">Build by The Drum</p>
+
+                <div class="sg-version sg-small">Version: 1.0.0</div>
 
             </footer>
 
