@@ -2,8 +2,9 @@ var gulp = require('gulp'),
 	marked = require('marked'),
 	fs = require('fs'),
 	gulpData = require('gulp-data'),
-	nunjucks = require('gulp-nunjucks'),
+	nunjucksRender = require('gulp-nunjucks-render'),
 	rename = require("gulp-rename");
+
 
 gulp.task('patterns', function () {
 	var data = {
@@ -19,15 +20,11 @@ gulp.task('patterns', function () {
 		});
 	});
 
-	// var env = new nunjucks.Environment()
-		// env
-	console.log(nunjucks.configure);
+	nunjucksRender.nunjucks.configure(['src/templates/']);
 
 	return gulp.src('./src/templates/partials/_patterns.html')
 		.pipe(gulpData(function () { return data; }))
-		.pipe(nunjucks.compile({data: data}, {
-			include:['./src/templates/']
-		}))
+		.pipe(nunjucksRender())
 		.pipe(rename('index.html'))
 		.pipe(gulp.dest('public'));
 
