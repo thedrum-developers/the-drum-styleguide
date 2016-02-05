@@ -20,7 +20,7 @@ gulp.task('patterns', function () {
 		});
 	});
 
-	nunjucksRender.nunjucks.configure(['src/templates/']);
+nunjucksRender.nunjucks.configure(['src/templates/','src/templates/partials/']);
 
 	return gulp.src('./src/templates/partials/_patterns.html')
 		.pipe(gulpData(function () { return data; }))
