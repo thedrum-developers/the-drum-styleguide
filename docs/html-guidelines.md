@@ -1,8 +1,8 @@
-# HTML
+## HTML
 
 - - -
 
-## Syntax & Formatting
+### Syntax & Formatting
 In general, The Drum should adhere to:
 
 * four (4) spaces indents, no tabs;
@@ -30,7 +30,9 @@ We use the the HTML 5 Doctype to enforce standards mode and more consistent rend
 </html>
 ```
 
-### Language Attribute
+- - -
+
+#### Language Attribute
 Given that our sites have a global audience, we set this ``<html>`` attribute dynamically given a user's language preferences.
 
 ```html
@@ -39,7 +41,11 @@ Given that our sites have a global audience, we set this ``<html>`` attribute dy
 </html>
 ```
 
-### Character Encoding
+
+- - -
+
+
+#### Character Encoding
 We ensure proper rendering of content by declaring an explicit character encoding. When doing so, you may avoid using character entities in your HTML, provided their encoding matches that of the document (generally UTF-8).
 
 ```html
@@ -49,7 +55,11 @@ We ensure proper rendering of content by declaring an explicit character encodin
 </head>
 ```
 
-### Right to Left (RTL) Support
+
+- - -
+
+
+#### Right to Left (RTL) Support
 With HTML, the W3C recommends adding the language direction attribute (dir="rtl") on the root (html) element to define the language direction of the document. Because some browsers incorrectly switch the location of the scroll bar to the left as well, current best-practice is to add the ``dir="rtl"`` attribute to the ``<head>`` tag and to a ``<div>`` wrapping the whole page to directionally reverse the entire document (which is an alternate recommendation by W3C) to ensure that the scrollbar isn't directionally reversed.
 
 Example RTL set-up:
@@ -67,7 +77,11 @@ Example RTL set-up:
 </html>
 ```
 
-### Attribute Order
+
+- - -
+
+
+#### Attribute Order
 HTML attributes should come in this particular order for easier reading of code.
 
 * ``class``;
@@ -81,7 +95,10 @@ HTML attributes should come in this particular order for easier reading of code.
 * ``checked``, ``required``
 
 
-### Boolean Attributes
+- - -
+
+
+#### Boolean Attributes
 A boolean attribute is one that needs no declared value. XHTML required you to declare a value, but HTML5 has no such requirement. For further reading, consult the WhatWG section on boolean attributes:
 
 > The presence of a boolean attribute on an element represents the true value, and the absence of the attribute represents the false value.
@@ -97,7 +114,10 @@ A boolean attribute is one that needs no declared value. XHTML required you to d
 </select>
 ```
 
-### Referenced Assets
+- - -
+
+
+#### Referenced Assets
 When referencing assets, we prefer:
 
 * to use an absolute path when referencing an external assets (not hosted by The Drum)
@@ -140,7 +160,10 @@ For Performance's sake, it's important to also:
 </html>
 ```
 
-### Browser Specific Scoping
+- - -
+
+
+#### Browser Specific Scoping
 We encourage troubleshooting and building code that will work in all browsers that we support without special modifications. For us, this includes more modern versions of Internet Explorer (currently > IE8).
 
 If you need to test in older versions of Internet Explorer, we recommend you to use conditional IE comments for CSS hooks to use in stylesheets. Class the html tag with the appropriate version of IE to be used directly in the master stylesheet that contains the selector being re-written. Here is a common example of how to do so:
@@ -153,6 +176,8 @@ If you need to test in older versions of Internet Explorer, we recommend you to 
 ```
 
 
+- - -
+
 
 #### IE compatibility mode
 Internet Explorer supports the use of a document compatibility ``<meta>`` tag to specify what version of IE the page should be rendered as. Unless circumstances require otherwise, it's most useful to instruct IE to use the latest supported mode with edge mode.
@@ -162,7 +187,10 @@ Internet Explorer supports the use of a document compatibility ``<meta>`` tag to
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 ```
 
-### Inline Documentation
+
+- - -
+
+#### Inline Documentation
 Strive to be clear in explaining why we did something so that the next person or the person 4 years later can follow why or how we were doing something. This means commenting on things like:
 
 * the structure and/or role of a file;
@@ -170,6 +198,10 @@ Strive to be clear in explaining why we did something so that the next person or
 * the reason for a CSS declaration;
 * the order of CSS declarations;
 * the thought process behind a way of doing things.
+
+
+- - -
+
 
 #### HTML Comments
 Comments in source code are removed when the project is built for release. However, commenting is expected to be included in source files. We write every in-line/explanative HTML comment as such:
@@ -214,6 +246,10 @@ Symfony 2 file structure be documented by Chris
 |   └── []            
 ```
 
+
+- - -
+
+
 ### File Naming
 We adhere to the following conventions when naming:
 
@@ -237,6 +273,10 @@ Almost all HTML elements carry an inherent meaning and should be used appropriat
 * Be sparing when using extra tags for visual effects (icons, wrappers, etc). * Ideally, every semantic tag on your page should have a specific, non-visual meaning.
 * Prefer to use JS to add any non-semantic tags needed for a JS feature.
 
+
+- - -
+
+
 ### Form fields, groups, and field sets
 Our form markup should follow the following standards and vocabulary:
 
@@ -246,6 +286,9 @@ Our form markup should follow the following standards and vocabulary:
 * for `legend`'s, use `.form-group-hd` or `.field-group-hd` respectively depending on the above scenario
 * we use one form field to one form field wrapper (`.field`)
 * we recommend wrapping radio buttons or checkboxes in its respective `label` element, but it is not required; you may display them unwrapped and side-by-side so long as the label's `for` attribute points to the inputs `id` attribute
+
+- - -
+
 
 #### Form field helper text
 We provide a nice way to provide additional context for form fields via helper text. When using helper text, make sure and  include the proper ARIA markup to connect the helper text to the input field. An example of this might be:
@@ -257,6 +300,9 @@ We provide a nice way to provide additional context for form fields via helper t
 ```
 
 Note how the `id` of the helper text is referenced by the `aria-describedby` of the text field.
+
+- - -
+
 
 #### Using enhanced form fields
 While our default form fields have been styled to look sleek, modern, and friendly, we do provide a few enhancements for a handful of types. The input types we've created optional enhanced styles for, are:
@@ -274,19 +320,38 @@ To take advantage of the enhanced input type, simple provide an additional class
 
 __Please note:__ _In order to use enhanced input types, the form label must wrap the form input._
 
+
+- - -
+
+
 ### Class and ID Attributes
 IDs and Classes should be specific and meaningful. IDs should be avoided where possible, due to their difficulty to override or reuse.
 
 When creating IDs and Classes, try to avoid visual identifiers such as directions and colors like top, left, red and blue unless absolutely necessary on a system of large scale and complexity. This keeps visual meaning out of markup and leaves it up to CSS to define layout. When naming multiple identical regions differentiate by nothing other than position or color, use a numbering sequence (two-digit formatted) such as “section-01” and “group-02”.
 
+
+- - -
+
+
 ### HTML5 Elements
 Use parts of HTML5 when appropriate, while ensuring older browsers are handled fairly. Feature availability sites like http://caniuse.com/ are your friend.
+
+
+- - -
+
 
 #### Article
 An independent piece of content, one suitable for putting in an ``<article>`` element, is content that makes sense on its own. This yardstick is up to your interpretation, but an easy smell test is would this make sense in an RSS feed? Of course weblog articles and static pages would make sense in a feed reader, and some sites have weblog comment feeds. On the other hand, a feed with each paragraph of this article as a separate post wouldn’t be very useful. The key point here is that the content has to make sense independent of its context, i.e. when all the surrounding content is stripped away.
 
+
+- - -
+
+
 #### Aside
 The ``<aside>`` element can now represent secondary content when used outside of an article. Keep in mind that aside — and, more generally, secondary content — does not necessarily mean “sidebar”. The style of the content should not dictate the use of the element. For content that is not the primary focus of an article (or page) but is still related to the article (or page), aside is what you need, regardless of its visual design.
+
+
+- - -
 
 
 #### Header
@@ -320,6 +385,11 @@ You could therefore have the following:
 </article>
 ```
 
+
+
+- - -
+
+
 #### Section
 ``<section>`` elements are blobs of content that you could store as an individual records in a database. They generally looks like this (and note that the heading goes inside the section element, not immediately before it):
 
@@ -338,6 +408,11 @@ You could therefore have the following:
 
 With very few exceptions, a section should not be used if there is no natural semantic heading for it.
 
+
+
+- - -
+
+
 #### Nav
 The ``<nav>`` element represents navigation for a document. It is also section containing links to other documents or to parts within the current document. Possible uses include:
 
@@ -346,6 +421,10 @@ The ``<nav>`` element represents navigation for a document. It is also section c
 * **Previous/next buttons (or pagination)** - important to the overall structure and hierarchy of the blog/site
 * **Search form** -  a search form is hugely important to the navigation of a site, particularly large sites which rely almost solely on their search engine.
 * **Breadcrumbs** - although breadcrumbs are not always necessary and can be used when not applicable, on large sites a breadcrumb trail can be an important navigation aid.
+
+
+- - -
+
 
 #### Figure
 The ``<figure>`` element is intended to be used in conjunction with the <figcaption> element to mark up diagrams, illustrations, photos, and code examples (among other things).
@@ -367,13 +446,23 @@ It may not always be appropriate to use the ``<figure>`` element, though. For ex
 </figure>
 ```
 
+- - -
+
+
 #### Footer
 The ``<footer>`` element represents the "footer" of a document or section of a document. The footer element typically contains metadata about its enclosing section
 
 An important point to note is that you are not restricted to use one ``<footer>`` element per site, you can use multiple footers, each of which will then become the ``<footer>`` for that section of the document. You could therefore have a ``<footer>`` for a ``<section>`` or an ``<article>``.
 
+
+- - -
+
 #### Main
 The ``<main>`` element is an exact analogue of ARIA's ``role="main"``, and is designed to show screenreaders and assistive technologies exactly where main content begins, so it can be a target for a "skip links" keyboard command, for example. It could also be used for content syndication (Instapaper-ish things); mobile browsers could zoom in on main when encountering non-responsive websites. It should therefore be used once per page. If you use something like ``<div id="main">`` (or similar, such as ``<div id="content">``), simply replace that with ``<main role="main">``.
+
+
+- - -
+
 
 #### Other HTML5 Elements
 The above elements are more structural, but HTML5 offers several other enhancements, including form fields which help improve usability by increased semantics. For example:

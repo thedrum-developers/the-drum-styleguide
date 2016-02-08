@@ -38,20 +38,20 @@
 
         <p>1. The Styleguide is built using the <a href="https://nodejs.org/en/" target="_blank">Node.js</a> package <a href="http://gulpjs.com/" target="_blank">Gulp.js</a>. To install the Styleguide and contribute to the project you should clone the repo from <a href="https://github.com/thedrum-developers/the-drum-styleguide" target="_blank">Github</a>.</p>
 
-        <div class="code-block">
-            <pre><code>$git clone https://github.com/thedrum-developers/the-drum-styleguide</code></pre>
+        <div class="sg-code-block">
+            <pre><code>git clone https://github.com/thedrum-developers/the-drum-styleguide</code></pre>
         </div>
 
         <p>2. In terminal, run Node Package Manager to install the node dependences.</p>
 
-        <div class="code-block">
-            <pre><code>$npm install</code></pre>
+        <div class="sg-code-block">
+            <pre><code>npm install</code></pre>
         </div>
 
         <p>3. Build the project by running Gulp.</p>
 
-        <div class="code-block">
-            <pre><code>$gulp</code></pre>
+        <div class="sg-code-block">
+            <pre><code>gulp build</code></pre>
         </div>
 
         <a class="sg-btn--top" href="#top">&#8593; Back to the Top</a>
@@ -111,8 +111,27 @@
 
         <h2 id="fonts" class="sg-h2">Font stack</h2>
 
-        <p>The Drum uses multiple font weights from the font families <a href="http://www.linotype.com/2090/avenir-next.html" target="_blank">Avenir Next</a> and <a href="http://www.linotype.com/1386572/ff-marselis-slab-family.html" target="_blank">Marselis Slab</a>.</p>
+        <p>The Drum uses multiple font weights from the font families <a href="http://www.linotype.com/1386572/ff-marselis-slab-family.html" target="_blank">Marselis Slab</a> and <a href="http://www.linotype.com/2090/avenir-next.html" target="_blank">Avenir Next</a>.</p>
 
+        <ul>
+            <li><h3 class="MarselisSlab-Bold">Marselis Slab Bold</h3></li>
+            <li><h3 class="MarselisSlab-BoldItalic">Marselis Slab Bold Italic</h3></li>
+            <li><h3 class="MarselisSlab-Regular">Marselis Slab</h3></li>
+            <li><h3 class="MarselisSlab-Italic">Marselis Slab Italic</h3></li>
+            <li><h3 class="MarselisSlab-Light">Marselis Slab Light</h3></li>
+            <li><h3 class="MarselisSlab-LightItalic">Marselis Slab Light Italic</h3></li>
+        </ul>
+
+        <ul>
+            <li><h3 class="AvenirNext-Bold">Avenir Next Bold</h3></li>
+            <li><h3 class="AvenirNext-Demi">Avenir Next Demi</h3></li>
+            <li><h3 class="AvenirNext-Medium">Avenir Next Medium</h3></li>
+            <li><h3 class="AvenirNext">Avenir Next</h3></li>
+            <li><h3 class="AvenirNext-Italic">Avenir Next Italic</h3></li>
+        </ul>
+
+        
+        
         <p>Provided by <a href="http://www.monotype.com/" target="_blank">Monotype</a></p>
 
         <a class="sg-btn--top" href="#top">&#8593; Back to the Top</a>
@@ -126,14 +145,23 @@
 
         -->
             {% for pattern in patterns %}
-                <h2 id="{{pattern.name}}">{{pattern.name}}</h2>
+                <h2 id="{{pattern.name}}" class="sg-h2">{{pattern.name}}</h2>
 
                 {{pattern.mdToHtml | safe}}
 
-                {{pattern.example}}
-                <pre>
-                     <code>{{pattern.code}}</code>
-                </pre>
+
+                <div class="sg-pattern">
+
+                    {{pattern.example}}
+
+                </div>    
+
+                <div class="sg-code-block">    
+                    <pre>
+                        <code>{{pattern.code}}</code>
+                    </pre>
+                </div>
+
             {% endfor %}
             
 

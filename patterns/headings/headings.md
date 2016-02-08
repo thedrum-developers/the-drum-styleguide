@@ -1,0 +1,1 @@
+Headings are used to define important topics and section content into digestible chunks.

@@ -2,20 +2,21 @@ var gulp = require('gulp'),
 	prefix = require('gulp-autoprefixer'),
 	sass = require('gulp-sass'),
 	concat = require("gulp-concat"),
-	size = require('gulp-size');
+	size = require('gulp-size'),
+	bulkSass = require('gulp-sass-bulk-import');
 
 
 gulp.task('build-patterns-css', function(){
 
-	return gulp.src('./patterns/**/*.scss')
+	return gulp.src('./src/scss/pattern-styles.scss')
+		.pipe(bulkSass())
 		.pipe(sass())
-		.pipe(concat("patterns-styles.css"))
 		.pipe(size({gzip: false, showFiles: true, title:'un-prefixed css'}))
 		.pipe(size({gzip: true, showFiles: true, title:'un-prefixed gzipped css'}))
 		.pipe(prefix())
 		.pipe(size({gzip: false, showFiles: true, title:'prefixed css'}))
 		.pipe(size({gzip: true, showFiles: true, title:'prefixed css'}))
-		.pipe(gulp.dest('./public/css/'))
+		.pipe(gulp.dest('./public/css/'));
 
 });
 
@@ -28,7 +29,7 @@ gulp.task('build-sg-css', function(){
 		.pipe(prefix())
 		.pipe(size({gzip: false, showFiles: true, title:'prefixed css'}))
 		.pipe(size({gzip: true, showFiles: true, title:'prefixed css'}))
-		.pipe(gulp.dest('./public/css/'))
+		.pipe(gulp.dest('./public/css/'));
 
 });
 

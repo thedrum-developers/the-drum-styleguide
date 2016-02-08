@@ -1,5 +1,5 @@
 /* -------------------------------------------------------------------------
-    Styleguide
+    Imports
 ---------------------------------------------------------------------------- */
 
 @charset 'UTF-8';
@@ -19,157 +19,84 @@
 @import
     'utils/mixins';
 
-// 4. Reset
-@import
-    'vendor/normalize';
-
 
 /* -------------------------------------------------------------------------
-    Fonts
+    SG Styles
 ---------------------------------------------------------------------------- */
 
-@font-face{
+.MarselisSlab-Bold {
 
-    font-family: AvenirNext-Regular;
-            src:url("../fonts/AvenirNext-Regular.woff2") format("woff2"),
-                url("../fonts/AvenirNext-Regular.woff") format("woff"),
-                url("../fonts/AvenirNext-Regular.ttf") format("truetype");
-                font-style: normal;
-}
-
-@font-face{
-
-    font-family: AvenirNext-Italic;
-            src:url("../fonts/AvenirNext-Italic.woff2") format("woff2"),
-                url("../fonts/AvenirNext-Italic.woff") format("woff"),
-                url("../fonts/AvenirNext-Italic.ttf") format("truetype");
-                font-style: italic;
-
+    font-family: MarselisSlab-Bold, Georgia, serif;
 
 }
 
-@font-face{
+.MarselisSlab-BoldItalic {
 
-    font-family: AvenirNext-Medium;
-            src:url("../fonts/AvenirNext-Medium.woff2") format("woff2"),
-                url("../fonts/AvenirNext-Medium.woff") format("woff"),
-                url("../fonts/AvenirNext-Medium.ttf") format("truetype");
-                font-style: normal;
+    font-family: MarselisSlab-BoldItalic, Georgia, serif;
+    font-style: italic;
 
 }
 
-@font-face{
+.MarselisSlab-Regular {
 
-    font-family: AvenirNext-Demi;
-            src:url("../fonts/AvenirNext-Demi.woff2") format("woff2"),
-                url("../fonts/AvenirNext-Demi.woff") format("woff"),
-                url("../fonts/AvenirNext-Demi.ttf") format("truetype");
-                font-style: normal;
-
-}
-
-@font-face{
-
-    font-family: AvenirNext-Bold;
-            src:url("../fonts/AvenirNext-Bold.woff2") format("woff2"),
-                url("../fonts/AvenirNext-Bold.woff") format("woff"),
-                url("../fonts/AvenirNext-Bold.ttf") format("truetype");
-                font-style: normal;
-
-}
-
-@font-face{
-
-    font-family: MarselisSlab-Regular;
-            src:url("../fonts/MarselisSlab-Regular.woff2") format("woff2"),
-                url("../fonts/MarselisSlab-Regular.woff") format("woff"),
-                url("../fonts/MarselisSlab-Regular.ttf") format("truetype");
-                font-style: normal;
-
-}
-
-@font-face{
-
-    font-family: MarselisSlab-Italic;
-            src:url("../fonts/MarselisSlab-Italic.woff2") format("woff2"),
-                url("../fonts/MarselisSlab-Italic.woff") format("woff"),
-                url("../fonts/MarselisSlab-Italic.ttf") format("truetype");
-                font-style: italic;
-
-}
-
-@font-face{
-
-    font-family: MarselisSlab-Light;
-            src:url("../fonts/MarselisSlab-Light.woff2") format("woff2"),
-                url("../fonts/MarselisSlab-Light.woff") format("woff"),
-                url("../fonts/MarselisSlab-Light.ttf") format("truetype");
-                font-style: normal;
-
-}
-
-@font-face{
-
-    font-family: MarselisSlab-LightItalic;
-            src:url("../fonts/MarselisSlab-LightItalic.woff2") format("woff2"),
-                url("../fonts/MarselisSlab-LightItalic.woff") format("woff"),
-                url("../fonts/MarselisSlab-LightItalic.ttf") format("truetype");
-                font-style: italic;
-
-}
-
-@font-face{
-
-    font-family: MarselisSlab-Bold;
-            src:url("../fonts/MarselisSlab-Bold.woff2") format("woff2"),
-                url("../fonts/MarselisSlab-Bold.woff") format("woff"),
-                url("../fonts/MarselisSlab-Bold.ttf") format("truetype");
-                font-style: normal;
-
-}
-
-@font-face{
-
-    font-family: MarselisSlab-BoldItalic;
-            src:url("../fonts/MarselisSlab-BoldItalic.woff2") format("woff2"),
-                url("../fonts/MarselisSlab-BoldItalic.woff") format("woff"),
-                url("../fonts/MarselisSlab-BoldItalic.ttf") format("truetype");
-                font-style: italic;
-
-}
-
-
-/* -------------------------------------------------------------------------
-    Styles
----------------------------------------------------------------------------- */
-
-*,
-*:before,
-*:after {
-
-    @include box-sizing;
-
-}
-
-
-html {
-
-    font-size: 1em;
-
-}
-
-body {
-
-    font-family: AvenirNext-Regular, serif;
+    font-family: MarselisSlab-Regular, Georgia, serif;
     font-weight: 400;
-    line-height: 1.45;
-    color: #333;
 
 }
 
-p {
+.MarselisSlab-Italic {
 
-    margin-bottom: 1.3em;
+    font-family: MarselisSlab-Italic, Georgia, serif;
+    font-weight: 400;
+    font-style: italic;
+
+}
+
+.MarselisSlab-Light {
+
+    font-family: MarselisSlab-Light, Georgia, serif;
+    font-weight: 400;
+
+}
+
+.MarselisSlab-LightItalic {
+
+    font-family: MarselisSlab-LightItalic, Georgia, serif;
+    font-weight: 400;
+    font-style: italic;
+
+}
+
+.AvenirNext-Bold{
+
+    font-family: AvenirNext-Bold, Arial, sans-serif;
+    font-weight: 700;
+
+}
+
+.AvenirNext-Demi{
+
+    font-family: AvenirNext-Demi, Arial, sans-serif;
+    font-weight: 700;
+
+}
+
+.AvenirNext-Medium{
+
+    font-family: AvenirNext-Medium, Arial, sans-serif;
+
+}
+
+.AvenirNext-Regular{
+
+    font-family: AvenirNext-Regular, Arial, sans-serif;
+
+}
+
+.AvenirNext-Italic{
+
+    font-family: AvenirNext-Italic, Arial, sans-serif;
+    font-style: italic;
 
 }
 
@@ -221,7 +148,12 @@ p {
 
     font-size: 0.633em;
     padding-top: 4px;
+    float: left;
 
+}
+
+.sg-about {
+    font-size: 1.2em;
 }
 
 /* -------------------------------------------------------------------------
@@ -232,6 +164,12 @@ p {
 .sg-wrapper {
 
     position: relative;
+
+}
+
+.sg-main {
+
+    margin-bottom: 5em;
 
 }
 
@@ -259,18 +197,25 @@ p {
     line-height: 1.5;
     padding: 6px 0 0 0;
 
-    img {
+    a {
 
-        width: 120px;
+        text-decoration: none;
+        color: #fff;
 
-    }
+        img {
 
-    .sg-product {
+            width: 120px;
 
-        font-family: AvenirNext-regular;
-        font-size: 0.8em;
+        }
 
-    }
+        .sg-product {
+
+            font-family: AvenirNext-regular;
+            font-size: 0.8em;
+
+        }
+
+    }   
 
     @include respond-to(640px) {
 
@@ -289,6 +234,7 @@ p {
     a {
         color: #fff;
         font-family: AvenirNext-Regular;
+        text-decoration: none;
     }
 
     @include respond-to(640px) {
@@ -390,7 +336,8 @@ p {
     Code Blocks
 ---------------------------------------------------------------------------- */
 
-.code-block {
+.sg-docs pre,
+.sg-code-block {
 
     background: #f7f7f7;
     border-radius: 3px;
@@ -425,15 +372,35 @@ pre {
     white-space: pre;
     background: #f8f8f8;
 
+    code {
+
+        display: block;
+        padding: 0;
+        overflow-y: auto;
+        font-weight: 300;
+        font-size: 1em;
+        background: none;
+
+    }
+
 }
 
 code {
+    display: inline-block;
+    background-color: #e9e9e9;
+    padding: 1px 5px;
+    font-size: 0.8em;
+    font-family: consolas,monospace,x;
+}
 
-    display: block;
-    padding: 0;
-    overflow-y: auto;
-    font-weight: 300;
 
+.sg-pattern {
+    border-radius: 3px;
+    box-sizing: border-box;
+    border: 1px solid #DDD;
+    -webkit-font-smoothing: antialiased;
+    margin-bottom: 1em;
+    padding: 1em;
 }
 
 
