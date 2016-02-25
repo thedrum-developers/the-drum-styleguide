@@ -1,14 +1,17 @@
 var gulp        = require('gulp');
-var browserSync = require('browser-sync').create();
+var browserSync = require('browser-sync'),
+browserReload = browserSync.reload;
 
-// Static server
 gulp.task('browser-sync', function() {
-    browserSync.init({
+    browserSync.init(null, {
         server: {
-            baseDir: "./public"
-        }
+            baseDir: "./public/"
+        },
+        port: 3000,
+        tunnel: "sqone"
     });
+});
 
-    gulp.watch("./public/*").on('change', browserSync.reload);
-
+gulp.task('bs-reload', function () {
+    browserSync.reload();
 });

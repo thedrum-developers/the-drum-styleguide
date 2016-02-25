@@ -1,0 +1,79 @@
+
+
+h1,
+h2,
+h3,
+h4 {
+
+    margin: 1.414em 0 0.5em;
+    font-family: MarselisSlab-Light, serif;
+    font-weight: inherit;
+    text-transform: capitalize;
+
+}
+
+h1,
+.heading--primary {
+
+    margin-top: 0;
+    font-size: em(24);
+
+    @include respond-to(640px){
+
+        font-size: em(30);
+
+    }
+
+    @include respond-to(768px){
+
+        font-size: em(36);
+
+    }
+
+    @include respond-to(1024px){
+
+        font-size: em(42);
+
+    }
+
+}
+
+
+.heading--intro {
+
+    font-family: MarselisSlab-Light, serif;
+    font-size: em(18);
+
+    @include respond-to(768px){
+
+        font-size: em(24);
+
+    }
+
+}
+
+h2 {
+
+    font-family: AvenirNext-Bold, serif;
+    font-size: em(18);
+
+    @include respond-to(640px){
+
+        font-size: em(24);
+
+    }
+
+}
+
+h3,h4 {
+
+    font-family: AvenirNext-Bold, serif;
+    font-size: em(16);
+
+    @include respond-to(640px){
+
+        font-size: em(20);
+
+    }
+
+}

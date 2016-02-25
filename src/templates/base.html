@@ -17,21 +17,30 @@
 
             <header>
 
+              <div class="black">
                 <div class="sg-container">
 
                   <h1 class="sg-logo">
                     <a href="/"><img src="images/logo-the-drum.svg" alt="">
-                    <span class="sg-product">| Styleguide</span></a>
+                    <span class="sg-product">Styleguide</span></a>
                   </h1>
 
-                  <nav>
-                        <div class="sg-nav">
-                            <a href="/">Patterns</a> |
-                            <a href="/general-guidelines.html">Guidelines</a>
-                        </div>
-                  </nav>
-
                 </div>
+
+              </div>  
+
+              <div class="grey-500">
+                <div class="sg-container">
+                  <nav>
+                      <div class="sg-nav">
+
+                        <a href="/">Patterns</a>
+                        <a href="/general-guidelines.html">Guidelines</a>
+
+                      </div>
+                  </nav>
+                </div>  
+              </div>
 
             </header>
 
@@ -40,14 +49,6 @@
     <div class="sg-main" role="main">
 
         <div class="sg-container">
-
-
-        <h2 class="sg-about">About</h2>
-
-        <p>The Visual, UI and front end style guide for the redesign of <a href="http://www.thedrum.com/" target="_blank">thedrum.com</a>. This living styleguide is designed to be an aid to building well-organized documentation of front-end codebases. By "living" we mean the documentation remains in constant sync with the actual code.</p>
-
-        <hr>
-
 
           {% block main %}
 
@@ -61,15 +62,25 @@
     </div>
 
 
+
+
     <div class="sg-footer" role="footer">
 
         <div class="sg-container">
+
+        <hr>
+
+        <h2 class="sg-about">About</h2>
+
+        <p>The Visual, UI and front end style guide for the redesign of <a href="http://www.thedrum.com/" target="_blank">thedrum.com</a>. This living styleguide is designed to be an aid to building well-organized documentation of front-end codebases. By "living" we mean the documentation remains in constant sync with the actual code.</p>
+
+        <hr>
 
             <footer>
 
                 <p class="sg-small">Build by The Drum</p>
 
-                <div class="sg-version sg-small">Version: 1.0.0</div>
+                <p class="sg-version sg-small">Version: 1.0.0</p>
 
             </footer>
 

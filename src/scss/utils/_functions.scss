@@ -1,3 +1,19 @@
 /* -------------------------------------------------------------------------
  Functions
 ---------------------------------------------------------------------------- */
+
+
+/*-------------------------------------------------------*\
+    #px to em
+\*-------------------------------------------------------*/
+$font-context: 16; // Default
+
+@function em($pixels, $context: $font-context) {
+  @return #{$pixels/$context}em;
+}
+
+$line-context: 24; // Default
+
+@function lh($pixels, $context: $line-context) {
+  @return #{$pixels/$context};
+}

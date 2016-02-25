@@ -1,0 +1,46 @@
+.crumbs {
+	padding: 1em;
+	display: none;
+}
+// .crumbs li {
+// 	display: none;
+// }
+// .crumbs li.last {
+// 	display: inline-block;
+// }
+// .crumbs li.last:before {
+// 	content: ' ← ';
+// 	color: $grey-300;
+// }
+
+@media all and (min-width: 32em) {
+	.crumbs {
+		padding: 1em;
+		display: block;
+	}
+	.crumbs li {
+		display: inline-block;
+	}
+
+	.crumbs li:after {
+		content: '//';
+		padding: 0 0.25em 0 0.5em;
+		color: $grey-400;
+	}
+	.crumbs li.last:before, .crumbs li.last:after {
+		content: '';
+	}
+
+	// Possible solution for collapsing breadcrumbs
+	// .crumbs li:nth-last-child(n+4) ~ li:nth-child(2) {
+		
+	// 	a {
+	// 		display: none;
+	// 	}
+
+	// 	&:before {
+	// 		content: '...';
+	// 	}
+	// }
+}
+

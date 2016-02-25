@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 
-
 {% block main %}
 
 
@@ -54,58 +53,328 @@
             <pre><code>gulp build</code></pre>
         </div>
 
-        <a class="sg-btn--top" href="#top">&#8593; Back to the Top</a>
+        <div class="sg-col-full">
+            <a class="sg-btn--top" href="#top">&#8593; Back to the Top</a>
+        </div>
 
         <hr>
 
         <h2 id="colors" class="sg-h2">Colours</h2>
 
-        <p>Majority of the new colour pallet has still to be formulated. However, the acceptance criteria for commiting new colours into the project will be that they comply with <a href="https://www.w3.org/TR/WCAG20/" target="_blank">WCAG2AA</a>.</p>
+        <p>Majority of the new colour pallet has still to be refined. However, the acceptance criteria for commiting new colours into the project will be that they comply with <a href="https://www.w3.org/TR/WCAG20/" target="_blank">WCAG2AA</a>.</p>
 
         <p>You can test proposed additions with <a href="http://webaim.org/resources/contrastchecker/" target="_blank">Webaim Contrast Checker</a></p>
 
+        <div class="sg-pattern">
 
-        <div class="sg-example-color color-shade--100">
-            <div class="sg-example-color-info">
-                <div>#FFFFFF</div>
-                <div>rgb(255, 255, 255)</div>
+            <!-- grey -->
+            <div class="sg-example-color white grey-border">
+                <div class="sg-example-color-info">
+                    <div>#FFFFFF</div>
+                    <div>rgb(255, 255, 255)</div>
+                </div>
             </div>
-        </div>
-        <div class="sg-example-color color-shade--200">
-            <div class="sg-example-color-info">
-                <div>#F38D90</div>
-                <div>rgb(233, 233, 233)</div>
+            <div class="sg-example-color grey-100">
+                <div class="sg-example-color-info">
+                    <div>#F5F5F5</div>
+                    <div>rgb(233, 233, 233)</div>
+                </div>
             </div>
-        </div>
-        <div class="sg-example-color color-shade--300">
-            <div class="sg-example-color-info">
-                <div>#ED1C24</div>
-                <div>rgb(204, 204, 204)</div>
+            <div class="sg-example-color grey-200">
+                <div class="sg-example-color-info">
+                    <div>#E1E1E1</div>
+                    <div>rgb(204, 204, 204)</div>
+                </div>
             </div>
-        </div>
-        <div class="sg-example-color color-shade--400">
-            <div class="sg-example-color-info">
-                <div>#B30E14</div>
-                <div>rgb(67, 60, 62)</div>
+            <div class="sg-example-color grey-300">
+                <div class="sg-example-color-info">
+                    <div>#CCCCCC</div>
+                    <div>rgb(67, 60, 62)</div>
+                </div>
             </div>
-        </div>
-        <div class="sg-example-color color-shade--500">
-            <div class="sg-example-color-info">
-                <div>#840A0F</div>
-                <div>rgb(35, 31, 32)</div>
+            <div class="sg-example-color grey-400 w-text">
+                <div class="sg-example-color-info">
+                    <div>#A1A1A1</div>
+                    <div>rgb(35, 31, 32)</div>
+                </div>
             </div>
+
+            <div class="sg-example-color grey-500 w-text">
+                <div class="sg-example-color-info">
+                    <div>#1a1a1a</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+
+            <div class="sg-example-color black w-text" >
+                <div class="sg-example-color-info">
+                    <div>#111111</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+
+            
+            <!-- red -->
+            <div class="sg-example-color red-100" >
+                <div class="sg-example-color-info">
+                    <div>#FBCBCD</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+            <div class="sg-example-color red-200" >
+                <div class="sg-example-color-info">
+                    <div>#F38D90</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+            <div class="sg-example-color red-300 w-text" >
+                <div class="sg-example-color-info">
+                     <div>#ED1C24</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+            <div class="sg-example-color red-400 w-text" >
+                <div class="sg-example-color-info">
+                       <div>#B30E14</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+            <div class="sg-example-color red-500 w-text" >
+                <div class="sg-example-color-info">
+                    <div>#840A0F</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+
+            <!-- teal -->
+            <div class="sg-example-color teal-100" >
+                <div class="sg-example-color-info">
+                    <div>#A9EAF6</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+            <div class="sg-example-color teal-200" >
+                <div class="sg-example-color-info">
+                    <div>#76DDF0</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+            <div class="sg-example-color teal-300" >
+                <div class="sg-example-color-info">
+                     <div>#15BADA</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+            <div class="sg-example-color teal-400 w-text" >
+                <div class="sg-example-color-info">
+                       <div>#118194</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+            <div class="sg-example-color teal-500 w-text" >
+                <div class="sg-example-color-info">
+                    <div>#0B6171</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+
+            <!-- blue -->
+            <div class="sg-example-color blue-100" >
+                <div class="sg-example-color-info">
+                    <div>#B7D9FF</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+            <div class="sg-example-color blue-200" >
+                <div class="sg-example-color-info">
+                    <div>#4390DF</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+            <div class="sg-example-color blue-300 w-text" >
+                <div class="sg-example-color-info">
+                     <div>#2171C4</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+            <div class="sg-example-color blue-400 w-text" >
+                <div class="sg-example-color-info">
+                       <div>#1D62AA</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+            <div class="sg-example-color blue-500 w-text" >
+                <div class="sg-example-color-info">
+                    <div>#195390</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+
+            <!-- green -->
+            <div class="sg-example-color green-100" >
+                <div class="sg-example-color-info">
+                    <div>#A8F2D5</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+            <div class="sg-example-color green-200" >
+                <div class="sg-example-color-info">
+                    <div>#39E2A0</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+            <div class="sg-example-color green-300" >
+                <div class="sg-example-color-info">
+                     <div>#1CC281</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+            <div class="sg-example-color green-400 w-text" >
+                <div class="sg-example-color-info">
+                       <div>#18A76F</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+            <div class="sg-example-color green-500 w-text" >
+                <div class="sg-example-color-info">
+                    <div>#106E4A</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+
+            <!-- yellow -->
+            <div class="sg-example-color yellow-100" >
+                <div class="sg-example-color-info">
+                    <div>#FEE096</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+            <div class="sg-example-color yellow-200" >
+                <div class="sg-example-color-info">
+                    <div>#FECB50</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+            <div class="sg-example-color yellow-300" >
+                <div class="sg-example-color-info">
+                     <div>#FDB913</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+            <div class="sg-example-color yellow-400" >
+                <div class="sg-example-color-info">
+                       <div>#EFAA02</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+            <div class="sg-example-color yellow-500 w-text" >
+                <div class="sg-example-color-info">
+                    <div>#D19502</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+
+            <!-- orange -->
+            <div class="sg-example-color orange-100" >
+                <div class="sg-example-color-info">
+                    <div>#FBC99F</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+            <div class="sg-example-color orange-200" >
+                <div class="sg-example-color-info">
+                    <div>#F6923D</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+            <div class="sg-example-color orange-300 w-text" >
+                <div class="sg-example-color-info">
+                     <div>#F58220</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+            <div class="sg-example-color orange-400 w-text" >
+                <div class="sg-example-color-info">
+                       <div>#EC720B</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+            <div class="sg-example-color orange-500 w-text" >
+                <div class="sg-example-color-info">
+                    <div>#CF6409</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+
+            <!-- purple -->
+            <div class="sg-example-color purple-100" >
+                <div class="sg-example-color-info">
+                    <div>#D7B3D3</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+            <div class="sg-example-color purple-200" >
+                <div class="sg-example-color-info">
+                    <div>#B674AF</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+            <div class="sg-example-color purple-300 w-text" >
+                <div class="sg-example-color-info">
+                     <div>#864780</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+            <div class="sg-example-color purple-400 w-text" >
+                <div class="sg-example-color-info">
+                       <div>#723C6D</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+            <div class="sg-example-color purple-500 w-text" >
+                <div class="sg-example-color-info">
+                    <div>#5E325A</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+
+            <!-- pink -->
+            <div class="sg-example-color pink-100" >
+                <div class="sg-example-color-info">
+                    <div>#ED97B7</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+            <div class="sg-example-color pink-200" >
+                <div class="sg-example-color-info">
+                    <div>#E8759F</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+            <div class="sg-example-color pink-300 w-text" >
+                <div class="sg-example-color-info">
+                     <div>#DA2668</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+            <div class="sg-example-color pink-400 w-text" >
+                <div class="sg-example-color-info">
+                       <div>#C1215B</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+            <div class="sg-example-color pink-500 w-text" >
+                <div class="sg-example-color-info">
+                    <div>#A61C4F</div>
+                    <div>rgb(237, 28, 36)</div>
+                </div>
+            </div>
+
         </div>
 
-        <div class="sg-example-color color-red--300">
-            <div class="sg-example-color-info">
-                <div>#ED1C24</div>
-                <div>rgb(237, 28, 36)</div>
-                <div class="sg-small">Font size 24px+</div>
-            </div>
+        <div class="sg-col-full">
+            <a class="sg-btn--top" href="#top">&#8593; Back to the Top</a>
         </div>
-
-
-        <a class="sg-btn--top" href="#top">&#8593; Back to the Top</a>
 
         <hr>
 
@@ -113,28 +382,36 @@
 
         <p>The Drum uses multiple font weights from the font families <a href="http://www.linotype.com/1386572/ff-marselis-slab-family.html" target="_blank">Marselis Slab</a> and <a href="http://www.linotype.com/2090/avenir-next.html" target="_blank">Avenir Next</a>.</p>
 
-        <ul>
-            <li><h3 class="MarselisSlab-Bold">Marselis Slab Bold</h3></li>
-            <li><h3 class="MarselisSlab-BoldItalic">Marselis Slab Bold Italic</h3></li>
-            <li><h3 class="MarselisSlab-Regular">Marselis Slab</h3></li>
-            <li><h3 class="MarselisSlab-Italic">Marselis Slab Italic</h3></li>
-            <li><h3 class="MarselisSlab-Light">Marselis Slab Light</h3></li>
-            <li><h3 class="MarselisSlab-LightItalic">Marselis Slab Light Italic</h3></li>
-        </ul>
-
-        <ul>
-            <li><h3 class="AvenirNext-Bold">Avenir Next Bold</h3></li>
-            <li><h3 class="AvenirNext-Demi">Avenir Next Demi</h3></li>
-            <li><h3 class="AvenirNext-Medium">Avenir Next Medium</h3></li>
-            <li><h3 class="AvenirNext">Avenir Next</h3></li>
-            <li><h3 class="AvenirNext-Italic">Avenir Next Italic</h3></li>
-        </ul>
-
-        
-        
         <p>Provided by <a href="http://www.monotype.com/" target="_blank">Monotype</a></p>
 
-        <a class="sg-btn--top" href="#top">&#8593; Back to the Top</a>
+        <div class="sg-col-full">
+
+            <div class="sg-pattern">
+
+                <ul class="sg-col-half">
+                    <li><h3 class="MarselisSlab-Bold">Marselis Slab Bold</h3></li>
+                    <li><h3 class="MarselisSlab-BoldItalic">Marselis Slab Bold Italic</h3></li>
+                    <li><h3 class="MarselisSlab-Regular">Marselis Slab</h3></li>
+                    <li><h3 class="MarselisSlab-Italic">Marselis Slab Italic</h3></li>
+                    <li><h3 class="MarselisSlab-Light">Marselis Slab Light</h3></li>
+                    <li><h3 class="MarselisSlab-LightItalic">Marselis Slab Light Italic</h3></li>
+                </ul>
+
+                <ul class="sg-col-half">
+                    <li><h3 class="AvenirNext-Bold">Avenir Next Bold</h3></li>
+                    <li><h3 class="AvenirNext-Demi">Avenir Next Demi</h3></li>
+                    <li><h3 class="AvenirNext-Medium">Avenir Next Medium</h3></li>
+                    <li><h3 class="AvenirNext">Avenir Next</h3></li>
+                    <li><h3 class="AvenirNext-Italic">Avenir Next Italic</h3></li>
+                </ul>
+
+            </div>    
+
+        </div>
+
+        <div class="sg-col-full">
+            <a class="sg-btn--top" href="#top">&#8593; Back to the Top</a>
+        </div>
 
         <hr>
 
@@ -156,10 +433,12 @@
 
                 </div>    
 
-                <div class="sg-code-block">    
-                    <pre>
-                        <code>{{pattern.code}}</code>
-                    </pre>
+                <div class="sg-code-block source">    
+                    <pre><code>{{pattern.code}}</code></pre>
+                </div>
+
+                <div class="sg-col-full">
+                    <a class="sg-btn--top" href="#top">&#8593; Back to the Top</a>
                 </div>
 
             {% endfor %}

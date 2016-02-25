@@ -2,14 +2,96 @@
  Variables
 ---------------------------------------------------------------------------- */
 
-$white:         #FFFFFF;
-$grey-light:    #E9E9E9;
-$grey:          #CCCCCC;
-$grey-dark:     #433C3E;
-$black:         #231F20;
+$white: #FFFFFF;
+$grey-100: #F5F5F5;
+$grey-200: #E1E1E1;
+$grey-300: #CCCCCC;
+$grey-400: #A1A1A1;
+$grey-500: #1a1a1a;
+$black: #111111;
 
-$red-100:       #FBCBCD;
-$red-200:       #F38D90;
-$red-300:       #ED1C24;
-$red-400:       #B30E14;
-$red-500:       #840A0F;
+$red-100: #FBCBCD;
+$red-200: #F38D90;
+$red-300: #ED1C24;
+$red-400: #B30E14;
+$red-500: #840A0F;
+
+$teal-100: #A9EAF6;
+$teal-200: #76DDF0;
+$teal-300: #15BADA;
+$teal-400: #118194;
+$teal-500: #0B6171;
+
+$blue-100: #B7D9FF;
+$blue-200: #4390DF;
+$blue-300: #2171C4;
+$blue-400: #1D62AA;
+$blue-500: #195390;
+
+$green-100: #A8F2D5;
+$green-200: #39E2A0;
+$green-300: #1CC281;
+$green-400: #18A76F;
+$green-500: #106E4A;
+
+$yellow-100: #FEE096;
+$yellow-200: #FECB50;
+$yellow-300: #FDB913;
+$yellow-400: #EFAA02;
+$yellow-500: #D19502;
+
+$orange-100: #FBC99F;
+$orange-200: #F6923D;
+$orange-300: #F58220;
+$orange-400: #EC720B;
+$orange-500: #CF6409;
+
+$purple-100: #D7B3D3;
+$purple-200: #B674AF;
+$purple-300: #864780;
+$purple-400: #723C6D;
+$purple-500: #5E325A;
+
+$pink-100: #ED97B7;
+$pink-200: #E8759F;
+$pink-300: #DA2668;
+$pink-400: #C1215B;
+$pink-500: #A61C4F;
+
+
+$pallete: (
+  ('grey', ($grey-100, $grey-200, $grey-300, $grey-400, $grey-500)),
+  ('red', ($red-100, $red-200, $red-300, $red-400, $red-500)),
+  ('teal', ($teal-100, $teal-200, $teal-300, $teal-400, $teal-500)),  
+  ('blue', ($blue-100, $blue-200, $blue-300, $blue-400, $blue-500)),
+  ('green', ($green-100, $green-200, $green-300, $green-400, $green-500)),
+  ('yellow', ($yellow-100, $yellow-200, $yellow-300, $yellow-400, $yellow-500)),
+  ('orange', ($orange-100, $orange-200, $orange-300, $orange-400, $orange-500)),
+  ('purple', ($purple-100, $purple-200, $purple-300, $purple-400, $purple-500)),
+  ('pink', ($pink-100, $pink-200, $pink-300, $pink-400, $pink-500))
+);
+
+$shades: (100, 200, 300, 400, 500);
+
+
+@for $iPallete from 1 through length($pallete) {
+
+  $swatch: nth($pallete, $iPallete);
+
+  @for $iShade from 1 through length($shades) {
+
+    .#{nth($swatch, 1)}-#{nth($shades, $iShade)} {
+      background-color: nth(nth($swatch, 2), $iShade);
+    }
+  }
+}
+
+.white {
+  background: $white;
+}
+
+.black {
+  background: $black;
+}
+
+
